@@ -1,0 +1,55 @@
+//Вариант 1.
+
+//1. Создать класс Hello, который будет приветствовать любого пользователя, используя командную строку.
+
+
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input name: ");
+        String name = in.nextLine();
+        System.out.printf("Hello %s!!!  \n", name);
+            in.close();
+    }
+}
+
+//3. Создать приложение, выводящее n строк с переходом и без перехода на новую строку.
+
+public class Main
+{
+
+    public static void main(String[] args) {
+        int n;
+        int k;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите количество строк n"+ ": ");
+        if (scanner.hasNextInt()) {
+            n = scanner.nextInt();
+        } else{
+
+            System.out.print("ошибка, введите целое число");
+            return;
+        }
+        String[] string = new String[n];
+        for (int i=0; i<n; i++) {
+
+            System.out.print("Строка " + (i+1) + ":");
+            string[i] = scanner.next();}
+        System.out.print("Вывод без перехода на новую строчку: ");
+        for (int i=0; i<n; i++) {
+
+            System.out.print(string[i]);
+        }
+        System.out.println();
+        System.out.print("Вывод c перехода на новую строчку: ");
+        System.out.println();
+        for (int i=0; i<n; i++) {
+            System.out.println(string[i]);
+
+
+        }
+    }
+}
